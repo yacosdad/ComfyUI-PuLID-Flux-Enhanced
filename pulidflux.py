@@ -297,7 +297,8 @@ class PulidFluxEvaClipLoader:
     def load_eva_clip(self):
         from .eva_clip.factory import create_model_and_transforms
 
-        model, _, _ = create_model_and_transforms('EVA02-CLIP-L-14-336', 'eva_clip', force_custom_clip=True)
+        #model, _, _ = create_model_and_transforms('EVA02-CLIP-L-14-336', 'eva_clip', force_custom_clip=True)
+        model, _, _ = create_model_and_transforms('EVA02-CLIP-L-14-336', '/app/ComfyUI/models/clip/EVA02_CLIP_L_336_psz14_s6B.pt', force_custom_clip=True)
 
         model = model.visual
 
